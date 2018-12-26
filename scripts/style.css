@@ -1,6 +1,36 @@
-
+body
+{
+    background-color: #FFFFF0;
+}
 
 .navbar
 {
     border-radius: 0px!important;
+}
+
+.navbar a
+{
+    color: white;
+}
+
+
+.header
+{
+    background-color: royalblue;
+    color: white;
+}
+
+.center
+{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+       
+}
+
+.splash-screen-image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
