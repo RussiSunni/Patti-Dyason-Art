@@ -10,7 +10,7 @@ body
 
 .navbar a
 {
-    color: white;
+    color: black;
 }
 
 
@@ -33,4 +33,5 @@ body
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 90vh;
 }
