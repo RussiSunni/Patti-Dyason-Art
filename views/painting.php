@@ -10,7 +10,7 @@ if(!$dbconn)
 } 
 else 
 {
-    echo "Opened database successfully";
+    // echo "Opened database successfully";
 }
 
 
@@ -21,7 +21,7 @@ $paintingName = $_GET['name'];
 $sql =
     "SELECT * 
     FROM paintings
-    WHERE name = 'Churchhaven' ";
+    WHERE name = '$paintingName' ";
 
 $query = pg_query($dbconn, $sql);
 
@@ -40,16 +40,18 @@ while($row = pg_fetch_row($query))
     $description = $row[4];
     $name = $row[5];
     $medium = $row[7];
+    $fileName = $row[8];
   }
  
-  echo "Operation done successfully123";
+//   echo "Operation done successfully";
   pg_close($dbconn);
 ?>
+
 <html>
 <head>
+    <title><?php echo $name; ?></title>
 </head>
 <body>
-
     <ul>
         <li>name: <?php echo $name; ?></li>
         <li>medium: <?php echo $medium; ?></li>
@@ -57,11 +59,7 @@ while($row = pg_fetch_row($query))
         <li>height: <?php echo $height; ?></li>
         <li>width: <?php echo $width; ?></li>
         <li>description: <?php echo $description; ?></li>
+        <li><img src="../images/large/<?php echo $fileName?>.jpg" width="80%" class="img-fluid" </li>
     </ul>
-
-
-
-
-
 </body>
 </html>
