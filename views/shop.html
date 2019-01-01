@@ -49,24 +49,32 @@
         </div>
     </section>
 
-   
+    <section id="filter">
+        <div id="filterContainer">
+            <button class="btn" onclick="filterSelection('all')">Show all</button>
+            <button class="btn" onclick="filterSelection('watercolour')">Watercolours</button>
+            <button class="btn" onclick="filterSelection('oil')">Oils</button>
+        </div>
+    </section>
+
+
 
     <section class="shop">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column watercolour">
                     <a href="painting.php?name=Churchhaven">
                         <img src="../images/churchhaven.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Churchhaven</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Vineyard">
                         <img src="../images/vineyard.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Vineyard</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column watercolour">
                     <a href="painting.php?name=Grape Pickers with Baskets">
                         <img src="../images/grape-pickers-with-baskets.jpg" width=100%>
                     </a>
@@ -74,19 +82,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column watercolour">
                     <a href="painting.php?name=The Farmhouse">
                         <img src="../images/the-farmhouse.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>The Farmhouse</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Garden and Steps">
                         <img src="../images/garden-and-steps.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Garden and Steps</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Dog on Bed">
                         <img src="../images/dog-on-bed.jpg" width=100%>
                     </a>
@@ -94,19 +102,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Harbour with Orange Sky">
                         <img src="../images/harbour-with-orange-sky.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Harbour with Orange Sky</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Helicopters Fighting Fire">
                         <img src="../images/helicopters-fighting-fire.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Helicopters Fighting Fire</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column watercolour">
                     <a href="painting.php?name=The Hiker">
                         <img src="../images/the-hiker.jpg" width=100%>
                     </a>
@@ -114,19 +122,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Winding River">
                         <img src="../images/winding-river.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Winding River</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column watercolour">
                     <a href="painting.php?name=People at Rockpools">
                         <img src="../images/people-at-rockpools.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>People at Rockpools</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Pier on Stony Beach">
                         <img src="../images/pier-on-stony-beach.jpg" width=100%>
                     </a>
@@ -134,19 +142,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Seagull and Beach">
                         <img src="../images/seagull-and-beach.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Seagull and Beach</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column watercolour">
                     <a href="painting.php?name=Three Musicians">
                         <img src="../images/three-musicians.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Three Musicians</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=The Windy Sea">
                         <img src="../images/the-windy-sea.jpg" width=100%>
                     </a>
@@ -154,19 +162,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column watercolour">
                     <a href="painting.php?name=Three Grape Pickers">
                         <img src="../images/three-grape-pickers.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Three Grape Pickers</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=The Grape Pickers">
                         <img src="../images/the-grape-pickers.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>The Grape Pickers</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Three Windsurfers">
                         <img src="../images/three-windsurfers.jpg" width=100%>
                     </a>
@@ -174,26 +182,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=Lady with Book">
                         <img src="../images/lady-with-book.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Lady with Book</em></p>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=Lady with Glass">
                         <img src="../images/lady-with-glass.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Lady with Glass</em></p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=Sun on Water">
                         <img src="../images/sun-on-water.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Sun on Water</em></p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column watercolour">
                     <a href="painting.php?name=Woman with Mielies on Head">
                         <img src="../images/woman-with-mielies-on-head.jpg" width=100%>
                     </a>
@@ -201,25 +209,25 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column watercolour">
                     <a href="painting.php?name=The Cliff">
                         <img src="../images/the-cliff.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>The Cliff</em></p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=The Grape Picker">
                         <img src="../images/the-grape-picker.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>The Grape Picker</em></p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=Scene from Dubai">
                         <img src="../images/scene-from-dubai.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Scene from Dubai</em></p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=Cat on Chair">
                         <img src="../images/cat-on-chair.jpg" width=100%>
                     </a>
@@ -228,26 +236,26 @@
 
             </div>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=The Reader">
                         <img src="../images/the-reader.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>The Reader</em></p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=Violinist and Other Musician">
                         <img src="../images/violinist-and-other-musician.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Violinist and Other Musician</em></p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column watercolour">
                     <a href="painting.php?name=Boy with Birds">
                         <img src="../images/boy-with-birds.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Boy with Birds</em></p>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=Children Picking Flowers">
                         <img src="../images/children-picking-flowers.jpg" width=100%>
                     </a>
@@ -255,19 +263,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Victorian Lady and Child">
                         <img src="../images/victorian-lady-and-child.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Victorian Lady and Child</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column watercolour">
                     <a href="painting.php?name=The Canyon">
                         <img src="../images/the-canyon.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>The Canyon</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Chairs on Beach">
                         <img src="../images/chairs-on-beach.jpg" width=100%>
                     </a>
@@ -275,19 +283,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=River Through Grass">
                         <img src="../images/river-through-grass.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>River Through Grass</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column watercolour">
                     <a href="painting.php?name=Augrabies Falls">
                         <img src="../images/augrabies-falls.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>Augrabies Falls</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=The Kramat">
                         <img src="../images/the-kramat.jpg" width=100%>
                     </a>
@@ -295,7 +303,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=The Flower Seller">
                         <img src="../images/the-flower-seller.jpg" width=100%>
                     </a>
@@ -303,13 +311,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=The Sea">
                         <img src="../images/the-sea.jpg" width=100%>
                     </a>
                     <p class="text-center"><em>The Sea</em></p>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 shop-column oil">
                     <a href="painting.php?name=Birds over River">
                         <img src="../images/birds-over-river.jpg" width=100%>
                     </a>
@@ -335,7 +343,10 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
+    <script src="../scripts/javascript.js"></script>
+        
+
+
 
 </body>
 
