@@ -105,3 +105,13 @@ body
     background-color: #ddd;
 }
   
+
+
+
+/* ------------------------------ Painting page ------------------------------- */
+
+.painting-details
+{
+    width: 100%;
+    border: 1px solid black;
+}
