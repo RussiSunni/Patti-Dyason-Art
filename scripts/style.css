@@ -1,10 +1,11 @@
 
 /* --------------------------- General -------------------------- */
 
+
 body
 {
     background-color: #FFFFF0;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .navbar
@@ -106,6 +107,39 @@ body
 }
   
 
+.gallery-filter
+{
+    background-color: #FFFFF0;
+    border: 1px solid #FFFFF0;
+}
+
+.gallery-filter:hover
+{
+    background-color: #ffffb3;
+    border: 1px solid #4d4d00;
+}
+
+.gallery-filter:active:hover {
+  color: #fff;
+  background-color:#999900;
+  border-color:  #4d4d00;
+}
+
+
+.gallery-filter:focus, .gallery-filter.focus
+{
+    outline: none;
+    box-shadow: none;
+}
+
+
+.filter-active
+{
+    background-color: #ffffb3;
+    border: 1px solid #4d4d00;
+}
+
+ 
 
 
 /* ------------------------------ Painting page ------------------------------- */
@@ -113,7 +147,7 @@ body
 .main
 {
     position: relative;
-    height: 100%;
+    min-height:100%;
 }
 
 .painting-details
@@ -126,4 +160,37 @@ body
 {
     position: absolute;
     bottom: 0;
+    height: 55px;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+#container
+{
+    min-height: 100%;
+}
+
+#main
+{
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+#footer
+{
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    clear: both;
 }

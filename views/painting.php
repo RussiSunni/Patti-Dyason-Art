@@ -2,16 +2,22 @@
 
 #connect to database
 
-$dbconn = pg_connect("host=localhost dbname=art-website user=art-website password=P@ssw0rd");
+$servername = "localhost";
+$username = "jonathan";
+$password = "Shukuk@1";
+$dbname = "patti-dyason-art";
 
-if(!$dbconn) 
+# Create connection
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+# Check connection
+
+if ($conn->connect_error) 
 {
-    echo "Error : Unable to open database";
+    die("Connection failed: " . $conn->connect_error);
 } 
-else 
-{
-    // echo "Opened database successfully";
-}
+
 
 
 # the query
@@ -23,28 +29,30 @@ $sql =
     FROM paintings
     WHERE name = '$paintingName' ";
 
-$query = pg_query($dbconn, $sql);
 
-if(!$query) 
-{
-     echo pg_last_error($db);
-     exit;
-} 
+$result = $conn->query($sql);
 
-while($row = pg_fetch_row($query)) 
+if($result->num_rows > 0) 
 {
-    $date = $row[0];
-    $price = $row[1];
-    $height = $row[2];
-    $width = $row[3];
-    $description = $row[4];
-    $name = $row[5];
-    $medium = $row[7];
-    $fileName = $row[8];
-  }
- 
-//   echo "Operation done successfully";
-  pg_close($dbconn);
+   while($row = $result->fetch_assoc())
+   {
+        $date = $row["date"];
+        $price = $row["price"];
+        $height = $row["height"];
+        $width = $row["width"];
+        $description = $row["description"];
+        $name = $row["name"];
+        $medium = $row["medium"];
+        $fileName = $row["filename"];
+   }
+}
+else 
+{
+   echo "0 results";
+}
+
+  $conn->close();
+
 ?>
 
 <html>
@@ -59,7 +67,7 @@ while($row = pg_fetch_row($query))
     <link rel="stylesheet" href="../scripts/style.css">
 </head>
 <body>
-    <div class= "main">
+    <div id = "container">
         <section class="navigation">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="../index.html">Patti Dyason Art</a>
@@ -73,7 +81,7 @@ while($row = pg_fetch_row($query))
                             <a class="nav-link" href="../index.html">Home </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Shop</a>
+                            <a class="nav-link active" href="./shop.html">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./contact.html">Information</a>
@@ -83,35 +91,47 @@ while($row = pg_fetch_row($query))
             </nav>
         </section>
 
+     
   
+        <div id = "main">
+            <section id = "painting">
+                <div class = "container">
+                    <div class = "row">
+                        <div class = "col-10">
+                            <img src="../images/large/<?php echo $fileName?>.jpg" class="img-fluid">
+                        </div>
+                        <div class = "col-2">
+                            <div class = "painting-details text-center">
+                                <p class = "mt-3"><strong><?php echo $name; ?></strong></p>
+                                <p><?php echo $medium; ?></p>
+                                <p><?php echo $price; ?></p>
+                                <p><?php echo $height; ?> x <?php echo $width; ?></p>
+                                <p><?php echo $description; ?></p>
+                                <!--Paypal button -->
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="WXH8EM4UDPM5A">
+                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>
 
-        <section id = "painting">
-            <div class = "container">
-                <div class = "row">
-                    <div class = "col-10">
-                        <img src="../images/large/<?php echo $fileName?>.jpg" class="img-fluid">
-                    </div>
-                    <div class = "col-2">
-                        <div class = "painting-details text-center">
-                            <p class = "mt-3"><strong><?php echo $name; ?></strong></p>
-                            <p><?php echo $medium; ?></p>
-                            <p><?php echo $price; ?></p>
-                            <p><?php echo $height; ?> x <?php echo $width; ?></p>
-                            <p><?php echo $description; ?></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-
-        
-
-        <section class="painting-footer w-100">
-            <hr>
-            <p class="copyright text-center w-100">© 2018 Patti Dyason</p>
-        </section>
     </div>
+
+
+    
+
+    <section id = "footer">
+        <hr>
+        <p class="copyright text-center w-100">© 2018 Patti Dyason</p>
+    </section>
+    
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

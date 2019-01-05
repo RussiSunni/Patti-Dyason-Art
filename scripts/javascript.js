@@ -68,3 +68,20 @@ function removeClass(element, name) {
 }
 
 
+$('#show-all').click(function(){
+  $('#show-all').addClass("filter-active");
+  $('#watercolours').removeClass("filter-active");
+  $('#oils').removeClass("filter-active");
+});
+
+$('#watercolours').click(function(){
+  $('#watercolours').addClass("filter-active");
+  $('#show-all').removeClass("filter-active");
+  $('#oils').removeClass("filter-active");
+});
+
+$('#oils').click(function(){
+  $('#oils').addClass("filter-active");
+  $('#show-all').removeClass("filter-active");
+  $('#watercolours').removeClass("filter-active");
+});

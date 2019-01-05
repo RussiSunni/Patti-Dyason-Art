@@ -50,10 +50,14 @@
     </section>
 
     <section id="filter">
-        <div id="filterContainer">
-            <button class="btn" onclick="filterSelection('all')">Show all</button>
-            <button class="btn" onclick="filterSelection('watercolour')">Watercolours</button>
-            <button class="btn" onclick="filterSelection('oil')">Oils</button>
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col">
+                    <button class="btn gallery-filter filter-active" onclick="filterSelection('all')" id="show-all">Show all</button>
+                    <button class="btn gallery-filter" onclick="filterSelection('watercolour')" id="watercolours">Watercolours</button>
+                    <button class="btn gallery-filter" onclick="filterSelection('oil')" id="oils">Oils</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -190,10 +194,7 @@
                 </div>
 
                 <div class="col-sm-3 shop-column oil">
-                    <a href="painting.php?name=Lady with Glass">
-                        <img src="../images/lady-with-glass.jpg" width=100%>
-                    </a>
-                    <p class="text-center"><em>Lady with Glass</em></p>
+
                 </div>
                 <div class="col-sm-3 shop-column oil">
                     <a href="painting.php?name=Sun on Water">
@@ -344,7 +345,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="../scripts/javascript.js"></script>
-        
+
 </body>
 
 </html>
