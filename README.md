@@ -1,1 +1,1 @@
-Simple Bootstrap HTML / CSS website with database.
+Simple Bootstrap HTML / CSS website with very simple database, using PHP.
